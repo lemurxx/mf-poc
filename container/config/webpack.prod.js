@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const stencilMfeRegister = require('./stencil-mfe-register');
 const packageJson = require('../package.json');
 
-const domain = process.env.PRODUCTION_DOMAIN; // set in the container.yml / repo secret
-const stencilRemote = `${domain}/stencil/latest`;
+const domain = 'https://do2iwbmg4wi9.cloudfront.net';
+const stencilRemote = `${domain}/segmentation`;
 
 const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/container/latest/'    //same set as the deploy path in container-deploy.yml + the / is needed at the end
+        publicPath: '/login/'    //same set as the deploy path in container-deploy.yml + the / is needed at the end
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -23,3 +23,5 @@ const prodConfig = {
         })
     ]
 }
+
+module.exports = merge(commonConfig, prodConfig);
