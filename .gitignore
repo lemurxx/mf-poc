@@ -4,3 +4,5 @@ dist
 loader
 www
 .editorconfig
+package.lock.json
+.prettierrc.json
