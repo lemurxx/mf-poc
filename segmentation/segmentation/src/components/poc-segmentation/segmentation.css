@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* 
+:host {
+    --color-accent-1: rgba(127, 40, 196);
+    --color-accent-2: rgba(127, 40, 196, 0.07);
+    --color-light-grey-1: #f6f9f9;
+    --color-light-grey-2: rgba(0, 0, 0, 0.12);
+    --color-medium-grey: #707677;
+    --color-dark-grey: #181818;
+    --color-error:  #e5231b;
+    --color-success :#1a8282;
+    --color-chart-1:#f8aa0b;
+    --color-chart-2: rgba(127, 40, 196);
+    --color-chart-3: #bae1e9;
+
+    --border-radius: 5px;
+    --border-width: 2px;
+    --primary-font: 'Montserrat', sans-serif;
+}  */
+
+
+* {
+    font-family: var(--primary-font) !important;
+}
+
+.segmentation-root {
+   box-shadow:  0 2px 8px 0 rgba(162, 172, 174, .4);
+   max-width: 600px;
+}
+
+h2 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 20px 5px 20px 20px;
+}
+
+poc-tooltip {
+    width: 20px;
+    height: 20px;
+    line-height: 28px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+ion-item.select-parent {
+    width: 200px;
+    --highlight-color-focused: transparent;
+    --highlight-color-valid: transparent;
+    --highlight-color-invalid: transparent;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    --border-color: var(--color-dark-grey);
+    --border-color: var(--color-dark-grey);
+    --padding-start: 0;
+}
+
+ion-select {
+    width: 100%;
+}
+
+ion-accordion ion-item {
+    --background-hover-opacity: 0;
+    --padding-start:0;
+    --padding-end:0;
+}
+
+.sections-accordion ion-accordion ion-item::part(native) {
+    background: var(--color-light-grey-1) !important;
+    border-color:  var(--color-light-grey-2);
+}
+
+ion-accordion ion-icon, ion-accordion svg {
+    font-size: 18px;
+    transition: transform .5s;
+}
+
+ion-accordion.accordion-expanded ion-icon, ion-accordion.accordion-expanded svg {
+    transform: rotate(.5turn);
+}
+
+.sections-accordion ion-accordion div[slot=content] {
+    padding: 20px;
+}
+
+.sections-accordion ion-accordion div[slot=content] ion-chip:first-of-type {
+    margin-left: 0;
+}
+
+.sections-accordion .title, sectionValue {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.sections-accordion .sectionValue {
+    font-weight: bold;
+}
+
+.error {
+    color: var(--color-error);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.sections-accordion .accordion-header {
+    padding: 20px 20px;
+    position: relative;
+}
+
+.sections-accordion .badge-container {
+    height: 14px;
+}
+
+poc-badge {
+    position: relative;
+    top: -14px;
+    left: -21px;
+}
+
+ion-chip {
+   color: var(--color-medium-grey);
+}
+
+poc-barchart {
+    width: calc(100% - 20px);
+    height: 120px;
+    margin: 0 10px;
+}
+
+poc-switch {
+    width: calc(100% - 16px);
+    margin: 0 8px 10px;
+
+}
+
+.charts-accordion  ion-icon[slot=end] {
+    display: none;
+}
+
+.charts-accordion ion-item {
+    color: var(--color-accent-1);
+    --color-hover: var(--color-accent-1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 20px;
+    --border-color: transparent;
+}
+
+.charts-accordion ion-item svg, .charts-accordion ion-item span {
+    vertical-align: middle;
+}
+
+.charts-accordion ion-item svg {
+    margin-right: 10px;
+    width: 24px;
+}
+
+path.chevron {
+    fill: none;
+    stroke: var(--color-accent-1);
+}
+
+
+.lvl-header {
+    background-color: var(--color-light-grey-1);
+    padding: 10px 20px;
+}
+
+.legend {
+    display: flex;
+    padding: 10px 0 20px;
+}
+
+.legend .cycle {
+    display: flex;
+}
+
+.legend .cycle .prev,
+.legend .cycle .pred,
+.legend .cycle .curr {
+    width: 6px;
+    border-radius: 4px;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.legend .cycle .prev {
+    background-color: var(--color-chart-1);
+}
+.legend .cycle .curr {
+    background-color: var(--color-chart-2);
+}
+
+.legend .cycle .pred {
+    background-color: var(--color-chart-3);
+}
+
+

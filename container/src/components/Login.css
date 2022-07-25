@@ -1,0 +1,76 @@
+
+.login-form {
+    --color-primary: rgba(127, 40, 196);
+    --color-error: #851168;
+    --font: 'Montserrat';
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, .5);
+    max-width: 400px;
+    padding: 60px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.login-form ion-item, .login-form ion-label, .login-form ion-input {
+    --highlight-color-focused:  var(--color-primary);
+    --ion-color-primary: var(--color-primary);
+    --ion-font-family: var(--font);
+}
+
+.login-form {
+    font-family:  var(--font);
+}
+
+.login-form h1, .login-form h4 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.login-form h1 {
+    font-size: 32px;
+}
+
+.login-form h4 {
+    font-size: 16px;
+}
+
+.login-form button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    font-family: var(--font);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.login-form button.disabled {
+    pointer-events: none;
+    background: silver;
+}
+
+.login-form .error-msg {
+    display: none;
+    color: var(--color-error);
+    font-size: 12px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.login-form ion-item[data-error=true]+.error-msg {
+    display: block;
+}
+
+.login-form ion-item[data-error=true] sup {
+    color: var(--color-error);
+}
+
+.login-form .login-error {
+    color: var(--color-error);
+    font-weight: bold;
+    margin-top: 30px;
+}

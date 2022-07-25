@@ -1,0 +1,71 @@
+:host {
+    display: inline-block;
+    --color-1: black;
+    --color-2: white;
+    --color-3: black;
+    --background-1: var(--color-chart-1);
+    --background-2: var(--color-chart-2);
+    --background-3: var(--color-chart-3);
+} 
+
+.root, .background, .bars {
+    height: 100%;
+}
+
+.background {
+    position: relative;
+}
+svg {
+    width:100%;
+    height: 100%;;
+}
+svg .chart-line {
+    stroke: var(--color-light-grey-2);
+    stroke-width: .08;
+}
+
+.bars {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+
+.bar {
+    height: 33.33%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bar span {
+    margin-left: 10px;
+}
+
+.bar-1 {
+    background-color: var(--background-1);
+    color: var(--color-1);
+}
+
+.bar-2 {
+    background-color: var(--background-2);
+    color: var(--color-2);
+}
+
+.bar-3 {
+    background-color: var(--background-3);
+    color: var(--color-3);
+}
+
+.empty {
+    color: black !important;
+}
+
+
+
+
+
+
+
+

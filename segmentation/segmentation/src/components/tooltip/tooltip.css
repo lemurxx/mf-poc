@@ -1,0 +1,35 @@
+:host {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+svg path {
+    fill: var(--color-accent-1);
+}
+
+span.tooltip {
+    padding: 15px;
+    position:absolute;
+    box-shadow: 0 2px 8px 0 rgba(162, 172, 174, 0.4);
+    background: white;
+    font-family: var(--primary-font);
+    font-size: 12px;
+    top:110%;
+    z-index: 300;
+    left:50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+
+svg:hover+span.tooltip {
+    opacity: 1;
+}
+

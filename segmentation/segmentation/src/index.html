@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/build/segmentation.css" />
+  <!-- <link rel="stylesheet" href="/assets/theme.css" /> -->
+
+  <script type="module" src="/build/segmentation.esm.js"></script>
+  <script nomodule src="/build/segmentation.js"></script>
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+</head>
+
+<body>
+  <poc-segmentation auth='{"userId": 122, "xSecToken": "2232"}'></poc-segmentation>
+
+
+  <script>
+    const loginUrl = 'https://choiceservicesqaf.avon.com/myavon/repScrty/v1/rest/JT/EN/logn';
+    const tokenStorageName = 'XSECTOKN';
+    const idStorageName = 'USRID';
+
+
+    function login(userId, password) {
+      console.log('login')
+      let tkn = localStorage.getItem(tokenStorageName);
+      if (tkn) {
+        return Promise.resolve({
+          userId,
+          xSecToken: tkn
+        });
+      }
+      return fetch(loginUrl, {
+        headers: {
+          acctnr: userId.toString(),
+          accept: 'application/json, text/plain, */* ',
+          'content-type': 'application/json'
+        }, method: 'put', body: JSON.stringify({ userId, password })
+      }).then(response => {
+        if (response && response.headers) {
+          tkn = response.headers.get('x-sec-token');
+          localStorage.setItem(tokenStorageName, tkn);
+          return {
+            userId,
+            xSecToken: tkn
+          };
+        }
+        else {
+          throw new Error();
+        }
+      }).catch((ex) => console.error('Authentication failed!', ex.message));
+    }
+
+    function init() {
+      login(98612, '123qwe').then(auth =>
+        document.querySelector('poc-segmentation').setAttribute('auth', JSON.stringify(auth)));
+    }
+
+    //setTimeout(init, 1000);
+
+
+
+
+  </script>
+</body>
+
+</html>

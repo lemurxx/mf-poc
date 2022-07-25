@@ -1,0 +1,29 @@
+:host {
+    display: inline-block;
+    --color-inactive: var(--color-light-grey-1);
+    --color-active: white;
+    --font-color: black;
+} 
+
+.switch-root {
+    display: flex;
+    background-color: var(--color-inactive);
+    padding: 5px;
+    box-shadow: 0 2px 4px 0 rgba(162, 172, 174, .4);
+    border-radius: 20px;
+}
+
+.switch-root>div {
+    background-color: var(--color-inactive);
+    transition: background-color .3s;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+}
+
+.switch-root>div.selected {
+    background-color: var(--color-active);
+    font-weight: bold;
+}

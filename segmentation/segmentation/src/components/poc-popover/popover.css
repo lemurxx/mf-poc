@@ -1,0 +1,16 @@
+
+.content-wrap {
+    font-family: var(--primary-font);
+    text-align: center;
+    padding: 30px;
+}
+
+.buttons {
+    padding: 30px;
+    text-align: center;
+}
+
+poc-button {
+    min-width: 120px;
+    height: 50px;
+}

@@ -1,0 +1,31 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+
+.simple-popover {
+    --width: auto;
+    --max-width: 600px;
+}
+
+
+:root {
+    --ion-font-family: 'Montserrat';
+    --color-accent-1: rgba(127, 40, 196);
+    --color-accent-2: rgba(127, 40, 196, 0.07);
+    --color-light-grey-1: #f6f9f9;
+    --color-light-grey-2: rgba(0, 0, 0, 0.12);
+    --color-medium-grey: #707677;
+    --color-dark-grey: #181818;
+    --color-error:  #e5231b;
+    --color-success :#1a8282;
+    --color-chart-1:#f8aa0b;
+    --color-chart-2: rgba(127, 40, 196);
+    --color-chart-3: #bae1e9;
+
+    --border-radius: 5px;
+    --border-width: 2px;
+    --primary-font: 'Montserrat', sans-serif;
+}
+

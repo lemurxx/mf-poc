@@ -1,0 +1,22 @@
+:host {
+    display: inline-block;
+} 
+
+ion-chip {
+    display: inline-block;
+    --color: white;
+    padding: 2px 10px;
+    height: auto;
+    font-size: 13px;
+    font-family: var(--primary-font);
+}
+
+ion-chip.error {
+    --background: var(--color-error) !important;
+}
+
+ion-chip.success {
+    --background: var(--color-success) !important;
+}
+
+
